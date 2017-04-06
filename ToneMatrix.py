@@ -9,8 +9,9 @@ class ToneMatrix:
     # Initialize the class by generating the matrix
     def __init__(self, row):
         # Initialize data members
-        # Transpose given row to start on 0
-        self.row = self.zero_t(row)
+        # Uncomment to transpose given row to start on 0
+        #row = self.zero_t(row)
+        self.row = row
         self.list = []
 
         # Generate the tone row matrix
@@ -19,7 +20,6 @@ class ToneMatrix:
     # This is called when printing or converting the object to a string
     def __str__(self):
         out_str = ''
-        out_char = ''
 
         # Add each row to the output string
         for t in range(len(self.list)):
